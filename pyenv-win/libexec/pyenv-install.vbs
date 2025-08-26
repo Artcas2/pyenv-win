@@ -23,7 +23,7 @@ Next
 
 Sub ShowHelp()
     ' WScript.echo "kkotari: pyenv-install.vbs..!"
-    WScript.Echo "Usage: pyenv install [-s] [-f] <version> [<version> ...] [-r|--register]"
+    WScript.Echo "Usage: pyenv install [-s] [-f] <version> [<version> ...]"
     WScript.Echo "       pyenv install [-f] [--32only|--64only] -a|--all"
     WScript.Echo "       pyenv install [-f] -c|--clear"
     WScript.Echo "       pyenv install -l|--list"
@@ -33,7 +33,6 @@ Sub ShowHelp()
     WScript.Echo "  -c/--clear             Removes downloaded installers from the cache to free space"
     WScript.Echo "  -f/--force             Install even if the version appears to be installed already"
     WScript.Echo "  -s/--skip-existing     Skip the installation if the version appears to be installed already"
-    WScript.Echo "  -r/--register          Register version for py launcher"
     WScript.Echo "  -q/--quiet             Install using /quiet. This does not show the UI nor does it prompt for inputs"
     WScript.Echo "  --32only               Installs only 32bit Python using -a/--all switch, no effect on 32-bit windows."
     WScript.Echo "  --64only               Installs only 64bit Python using -a/--all switch, no effect on 32-bit windows."
@@ -372,7 +371,7 @@ Sub main(arg)
     opt32 = False
     opt64 = False
     optDev = False
-    optReg = False
+    optReg = True
     Set installVersions = CreateObject("Scripting.Dictionary")
 
     For idx = 0 To arg.Count - 1
@@ -393,8 +392,6 @@ Sub main(arg)
             Case "--32only"         opt32 = True
             Case "--64only"         opt64 = True
             Case "--dev"            optDev = True
-            Case "-r"               optReg = True
-            Case "--register"       optReg = True
             Case Else
                 installVersions.Item(TryResolveVersion(arg(idx), True)) = Empty
         End Select
@@ -409,12 +406,10 @@ Sub main(arg)
     End If
     If optReg Then
         If opt32 Then
-            WScript.Echo "pyenv-install: --register not supported for 32 bits."
-            WScript.Quit 1
+            optReg = False
         End If
         If optAll Then
-            WScript.Echo "pyenv-install: --register not supported for all versions."
-            WScript.Quit 1
+            optReg = False
         End If
     End If
 
