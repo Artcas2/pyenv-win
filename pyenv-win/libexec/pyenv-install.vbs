@@ -250,10 +250,10 @@ Sub registerVersion(version, installPath)
     ' Python Software Foundation
     'sh.RegWrite key & "DisplayName","pyenv-win","REG_SZ"
     ' http://www.python.org/
-    'sh.RegWrite key & "SupportUrl","https://github.com/pyenv-win/pyenv-win/issues","REG_SZ"
+    'sh.RegWrite key & "SupportUrl","https://github.com/Artcas2/pyenv-win/issues","REG_SZ"
     key = key & version &"\"
     sh.RegWrite key & "DisplayName","Python "& sysVersion &" (" & bitDepth & "-bit)","REG_SZ"
-    sh.RegWrite key & "SupportUrl","https://github.com/pyenv-win/pyenv-win/issues","REG_SZ"
+    sh.RegWrite key & "SupportUrl","https://github.com/Artcas2/pyenv-win/issues","REG_SZ"
     sh.RegWrite key & "SysArchitecture",bitDepth & "bit","REG_SZ"
     sh.RegWrite key & "SysVersion",sysVersion,"REG_SZ"
     sh.RegWrite key & "Version",versionAttribute,"REG_SZ"
