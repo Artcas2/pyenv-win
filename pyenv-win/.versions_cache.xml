@@ -4525,6 +4525,21 @@
 		<file>python-3.15.0rc3-amd64.exe</file>
 		<URL>https://www.python.org/ftp/python/3.15.0/python-3.15.0rc3-amd64.exe</URL>
 	</version>
+	<version x64="false" webInstall="false" msi="false">
+		<code>3.15.0-win32</code>
+		<file>python-3.15.0.exe</file>
+		<URL>https://www.python.org/ftp/python/3.15.0/python-3.15.0.exe</URL>
+	</version>
+	<version x64="true" webInstall="false" msi="false">
+		<code>3.15.0-arm</code>
+		<file>python-3.15.0-arm64.exe</file>
+		<URL>https://www.python.org/ftp/python/3.15.0/python-3.15.0-arm64.exe</URL>
+	</version>
+	<version x64="true" webInstall="false" msi="false">
+		<code>3.15.0</code>
+		<file>python-3.15.0-amd64.exe</file>
+		<URL>https://www.python.org/ftp/python/3.15.0/python-3.15.0-amd64.exe</URL>
+	</version>
 	<version x64="true" webInstall="false" msi="false">
 		<code>pypy2.7-v7.3.4-win64</code>
 		<file>pypy2.7-v7.3.4-win64.zip</file>
@@ -4644,6 +4659,12 @@
 		<file>pypy2.7-v8.0.0-win64.zip</file>
 		<URL>https://downloads.python.org/pypy/pypy2.7-v8.0.0-win64.zip</URL>
 		<zipRootDir>pypy2.7-v8.0.0-win64</zipRootDir>
+	</version>
+	<version x64="true" webInstall="false" msi="false">
+		<code>pypy2.7-v8.0.1-win64</code>
+		<file>pypy2.7-v8.0.1-win64.zip</file>
+		<URL>https://downloads.python.org/pypy/pypy2.7-v8.0.1-win64.zip</URL>
+		<zipRootDir>pypy2.7-v8.0.1-win64</zipRootDir>
 	</version>
 	<version x64="true" webInstall="false" msi="false">
 		<code>pypy3.7-v7.3.4-win64</code>
@@ -4862,10 +4883,22 @@
 		<zipRootDir>pypy3.11-v8.0.0-win64</zipRootDir>
 	</version>
 	<version x64="true" webInstall="false" msi="false">
+		<code>pypy3.11-v8.0.1-win64</code>
+		<file>pypy3.11-v8.0.1-win64.zip</file>
+		<URL>https://downloads.python.org/pypy/pypy3.11-v8.0.1-win64.zip</URL>
+		<zipRootDir>pypy3.11-v8.0.1-win64</zipRootDir>
+	</version>
+	<version x64="true" webInstall="false" msi="false">
 		<code>pypy3.12-v8.0.0-win64</code>
 		<file>pypy3.12-v8.0.0-win64.zip</file>
 		<URL>https://downloads.python.org/pypy/pypy3.12-v8.0.0-win64.zip</URL>
 		<zipRootDir>pypy3.12-v8.0.0-win64</zipRootDir>
+	</version>
+	<version x64="true" webInstall="false" msi="false">
+		<code>pypy3.12-v8.0.1-win64</code>
+		<file>pypy3.12-v8.0.1-win64.zip</file>
+		<URL>https://downloads.python.org/pypy/pypy3.12-v8.0.1-win64.zip</URL>
+		<zipRootDir>pypy3.12-v8.0.1-win64</zipRootDir>
 	</version>
 	<version x64="true" webInstall="false" msi="false">
 		<code>graalpy-23.1.0-windows-amd64</code>
